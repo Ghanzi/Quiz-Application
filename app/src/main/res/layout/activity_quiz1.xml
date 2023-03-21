@@ -1,70 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
-
-    <ImageView
-        android:id="@+id/logo"
+    tools:context=".Quiz1"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center">
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
+        android:text="Quiz 1"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
 
-        android:src="@drawable/logo" />
-
-    <EditText
-        android:id="@+id/name_input"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:maxLines="1"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="8dp"
-        android:layout_below="@id/logo" />
+        android:src="@drawable/q1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A cette intersection, je laisse la priorité à droite :"
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        android:textStyle="bold"/>
 
-
-    <EditText
-        android:id="@+id/email_input"
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:maxLines="1"
-        android:drawableLeft="@drawable/ic_baseline_mail_24"
-        android:drawablePadding="8dp"
-        android:layout_below="@id/name_input" />
+        android:id="@+id/rg">
 
-    <EditText
-        android:id="@+id/password_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="8dp"
-        android:layout_below="@id/email_input" />
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Oui" />
 
-    <EditText
-        android:id="@+id/confirm_password_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="8dp"
-        android:layout_below="@id/password_input" />
-
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Non" />
+    </RadioGroup>
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/bNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:layout_marginTop="32dp"
-        android:layout_below="@id/confirm_password_input" />
+        android:text="Next"
+        android:layout_marginTop="20dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:src="@drawable/quizapp"/>
 
-</RelativeLayout>
+</LinearLayout>
