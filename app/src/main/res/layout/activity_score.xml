@@ -12,7 +12,7 @@
     <ImageView
         android:layout_marginTop="16px"
         android:layout_width="match_parent"
-        android:layout_height="500px"
+        android:layout_height="400px"
         android:src="@drawable/quizapp"/>
     <TextView
         android:layout_width="wrap_content"
@@ -45,13 +45,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
+            android:id="@+id/bLogout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:layout_weight="2"
-            android:text="Logout"
-            android:id="@+id/bLogout"
-            android:layout_margin="16dp"/>
+            android:text="Logout" />
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
