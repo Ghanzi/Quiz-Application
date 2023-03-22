@@ -1,15 +1,15 @@
+——————————————————————————————
 plugins {
     id 'com.android.application'
 }
 
 android {
-    namespace 'com.example.quizapp_m71'
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.quizapp_m71"
-        minSdk 24
-        targetSdk 32
+        applicationId "com.bousmah.quizapp"
+        minSdk 21
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
