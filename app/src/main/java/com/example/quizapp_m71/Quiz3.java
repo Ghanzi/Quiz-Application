@@ -14,14 +14,18 @@ public class Quiz3 extends AppCompatActivity {
     RadioGroup rg;
     RadioButton rb;
     Button bNext;
+    Button bPrev;
+
+
     int score;
-    String RepCorrect="Non";
+    String RepCorrect="5 events";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz3);
         rg=(RadioGroup) findViewById(R.id.rg);
         bNext=(Button) findViewById(R.id.bNext);
+        bPrev=(Button) findViewById(R.id.bPrev);
         Intent intent=getIntent();
         score=intent.getIntExtra("score",0) ;
         //Toast.makeText(getApplicationContext(),score+"",Toast.LENGTH_SHORT).show();
@@ -45,6 +49,21 @@ public class Quiz3 extends AppCompatActivity {
                     overridePendingTransition(R.anim.exit,R.anim.entry);
                     finish();
                 }
+
+            }
+        });
+        bPrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent=new Intent(Quiz3.this,Quiz2.class);
+                intent.putExtra("score",score);
+                startActivity(intent);
+                //overridePendingTransition(R.anim.fadein,R.anim.fadeout);
+                overridePendingTransition(R.anim.exit,R.anim.entry);
+                finish();
+
 
             }
         });

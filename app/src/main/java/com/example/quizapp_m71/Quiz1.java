@@ -13,8 +13,9 @@ public class Quiz1 extends AppCompatActivity {
     RadioGroup rg;
     RadioButton rb;
     Button bNext;
+
     int score=0;
-    String RepCorrect="Non";
+    String RepCorrect="Un type d'intelligence artificielle qui permet aux ordinateurs d'apprendre sans être explicitement programmés.";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,7 @@ public class Quiz1 extends AppCompatActivity {
 
             }
         });
+
 
     }
 }

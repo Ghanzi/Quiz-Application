@@ -26,8 +26,11 @@ public class Score extends AppCompatActivity {
         bTry=(Button) findViewById(R.id.bTry);
         Intent intent=getIntent();
         score=intent.getIntExtra("score",0) ;
-        progressBar.setProgress(100*score/5);
+        progressBar.setProgress(100*score);
         tvScore.setText(100*score/5+" %");
+        ProgressBar progressBar = findViewById(R.id.progressBar);
+        progressBar.setProgress(100 * score / 5);
+
         //Toast.makeText(getApplicationContext(),score+"",Toast.LENGTH_SHORT).show();
         bLogout.setOnClickListener(new View.OnClickListener() {
             @Override

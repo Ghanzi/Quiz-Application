@@ -19,12 +19,12 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/q1"/>
+        android:layout_height="200dp"
+        android:src="@drawable/po"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A cette intersection, je laisse la priorité à droite :"
+        android:text="The Product Owner is:"
         android:textSize="20sp"
         android:layout_marginBottom="20sp"
         android:textStyle="bold"/>
@@ -39,21 +39,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Oui" />
+            android:text="Who manages and prioritizes the Product Backlog." />
 
         <RadioButton
             android:id="@+id/rb2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Non" />
+            android:text="Who delivers a potentially shippable product increment at the end of each Sprint." />
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Who facilitates the Scrum process and ensures adherence to Scrum principles and practices." />
     </RadioGroup>
     <Button
+        android:gravity="center"
+        android:layout_width="100dp"
         android:id="@+id/bNext"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
         android:layout_marginTop="20dp"/>
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="80dp"

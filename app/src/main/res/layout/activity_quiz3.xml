@@ -19,12 +19,12 @@
         />
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/q3"/>
+        android:layout_height="200dp"
+        android:src="@drawable/sc"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avant de partir, je laisse tourner mon moteur pour qu'il monte en température :"
+        android:text="How mush events are in Scrum ?"
         android:textSize="20sp"
         android:layout_marginBottom="20sp"
         android:textStyle="bold"/>
@@ -39,23 +39,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Oui" />
+            android:text="3 events" />
 
         <RadioButton
             android:id="@+id/rb2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Non" />
+            android:text="4 events" />
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5 events" />
 
     </RadioGroup>
 
-    <Button
-        android:id="@+id/bNext"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:layout_marginTop="20dp"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <Button
+            android:id="@+id/bPrev"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/bNext"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
     <ImageView
         android:layout_width="50dp"
         android:layout_height="80dp"

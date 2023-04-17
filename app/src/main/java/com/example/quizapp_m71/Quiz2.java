@@ -13,14 +13,17 @@ public class Quiz2 extends AppCompatActivity {
     RadioGroup rg;
     RadioButton rb;
     Button bNext;
+    Button bPrev;
+
     int score;
-    String RepCorrect="À droite";
+    String RepCorrect="Who facilitates the Scrum process and ensures adherence to Scrum principles and practices.";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz2);
         rg=(RadioGroup) findViewById(R.id.rg);
         bNext=(Button) findViewById(R.id.bNext);
+        bPrev=(Button) findViewById(R.id.bPrev);
         Intent intent=getIntent();
         score=intent.getIntExtra("score",0) ;
         //Toast.makeText(getApplicationContext(),score+"",Toast.LENGTH_SHORT).show();
@@ -44,6 +47,21 @@ public class Quiz2 extends AppCompatActivity {
                     overridePendingTransition(R.anim.exit,R.anim.entry);
                     finish();
                 }
+
+            }
+        });
+        bPrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent=new Intent(Quiz2.this,Quiz1.class);
+                intent.putExtra("score",score);
+                startActivity(intent);
+                //overridePendingTransition(R.anim.fadein,R.anim.fadeout);
+                overridePendingTransition(R.anim.exit,R.anim.entry);
+                finish();
+
 
             }
         });
